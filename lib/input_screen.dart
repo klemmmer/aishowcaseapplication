@@ -17,7 +17,7 @@ class InputScreen extends StatefulWidget {
 
 class _InputScreenState extends State<InputScreen> {
   final TextEditingController _controller1 = TextEditingController(text: "Clemens sitting on a black bench. Looking into the camera. Background is a park with trees and a blue sky.");
-  final TextEditingController _controller2 = TextEditingController();
+  final TextEditingController _controller2 = TextEditingController(text: "What can you tell me about Clemens Harnischmacher?");
   late WebSocketChannel channel;
   late String myUuid;
   bool textChanged = false;
@@ -109,7 +109,7 @@ class _InputScreenState extends State<InputScreen> {
               maxLines: 10,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'Enter your text',
+                labelText: 'Here you can enter a text to generate an image',
               ),
               enabled: !isLoading, // Disable TextField when loading
             ),
@@ -156,7 +156,7 @@ class _InputScreenState extends State<InputScreen> {
   maxLines: 10,
   decoration: InputDecoration(
     border: OutlineInputBorder(),
-    labelText: 'Was möchtest du wissen?',
+    labelText: 'Here you ask what you want to know about Clemens',
   ),
   enabled: !isLlamaLoading, // Textfeld wird deaktiviert während des Ladens
 ),

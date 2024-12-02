@@ -1,0 +1,62 @@
+{
+  "flutter": {
+    "platforms": {
+      "ios": {
+        "default": {
+          "projectId": "aidemoclemensha",
+          "appId": "1:438886009304:ios:9d15d1062dbd581e974aad",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "aidemoclemensha",
+          "appId": "1:438886009304:ios:9d15d1062dbd581e974aad",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "aidemoclemensha",
+          "configurations": {
+            "ios": "1:438886009304:ios:9d15d1062dbd581e974aad",
+            "macos": "1:438886009304:ios:9d15d1062dbd581e974aad",
+            "web": "1:438886009304:web:f7d6a4d8089ae7c7974aad"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "headers": [
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          },
+          {
+            "key": "Access-Control-Allow-Methods",
+            "value": "GET,POST,PUT,DELETE,OPTIONS"
+          },
+          {
+            "key": "Access-Control-Allow-Headers",
+            "value": "Content-Type,Authorization"
+          }
+        ]
+      }
+    ],
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "europe-west1"
+    }
+  } 
+}

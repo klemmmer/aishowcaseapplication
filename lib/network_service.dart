@@ -16,6 +16,7 @@ Future<void> send(String fileContent, Function(Map<String, dynamic>) onResponse)
       headers: {'Content-Type': 'application/json'},
       body: fileContent,
     );
+    print(response);
     if (response.statusCode == 200) {
       print('JSON Datei gesendet: ${response.body}');
       Map<String, dynamic> responseBody = json.decode(response.body);
@@ -93,7 +94,7 @@ Future<void> pollForResponse(String promptId, Function(Map<String, dynamic>) onR
 
 //Post request zu Ollama
 Future<String> sendPostRequestLlama(String llamaText) async {
-  final url = Uri.parse('http://llama.harnischmachers.de/api/chat/completions');
+  final url = Uri.parse('https://llama.harnischmachers.de/api/chat/completions');
   final headers = {
     'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFlZjk1NjBjLWZjNmItNGY4OC1iMjlhLTAzYjExOThkY2Q1OSJ9.AtFEbKtuRNgBNIR_5_tnZ5HebxztLPMHDFWdYMPIpvY',
     'Content-Type': 'application/json',
